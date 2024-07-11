@@ -21,6 +21,7 @@ func HandleFunc(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusBadRequest)
+		return
 	}
 
 	requestID := fmt.Sprintf("%d", time.Now().UnixNano())
@@ -30,6 +31,7 @@ func HandleFunc(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
 	}
 
 	responseMap.Store(requestID, body)
