@@ -1,0 +1,12 @@
+# Binaries
+main
+
+# OS Files
+*.DS_Store
+
+# Go specific
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
