@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: http-proxy-server
+    env: go
+    buildCommand: go build -o bin/http-proxy-server
+    startCommand: ./bin/http-proxy-server
+    plan: free
