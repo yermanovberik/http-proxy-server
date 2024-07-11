@@ -42,7 +42,97 @@ HTTP Proxy Server — это HTTP-сервер, который проксиру�
     ```
 
 4.Запуск проекта:
- ```make run
+ ``` make run
     ```
 
 
+
+Запрос 1: GET запрос
+URL: https://http-proxy-server-u0dt.onrender.com/proxy
+
+Метод: POST
+
+Тело запроса:
+{
+    "method": "GET",
+    "url": "https://jsonplaceholder.typicode.com/posts/1"
+}
+
+
+
+Ответ:
+
+ {
+    "id": "1720678827142878949",
+    "status": 200,
+    "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Age": "4339",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "Cache-Control": "max-age=43200",
+        "Cf-Cache-Status": "HIT",
+        "Cf-Ray": "8a16b00e3a6540c0-SIN",
+        "Content-Type": "application/json; charset=utf-8",
+        "Date": "Thu, 11 Jul 2024 06:20:27 GMT",
+        "Etag": "W/\"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU\"",
+        "Expires": "-1",
+        "Nel": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}",
+        "Pragma": "no-cache",
+        "Report-To": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1712085044&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=5bmno5H5ge72f6ZZ4%2B52pSdbReNAenxXqSzCrWHAqk4%3D\"}]}",
+        "Reporting-Endpoints": "heroku-nel=https://nel.heroku.com/reports?ts=1712085044&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=5bmno5H5ge72f6ZZ4%2B52pSdbReNAenxXqSzCrWHAqk4%3D",
+        "Server": "cloudflare",
+        "Vary": "Origin, Accept-Encoding",
+        "Via": "1.1 vegur",
+        "X-Content-Type-Options": "nosniff",
+        "X-Powered-By": "Express",
+        "X-Ratelimit-Limit": "1000",
+        "X-Ratelimit-Remaining": "999",
+        "X-Ratelimit-Reset": "1712085075"
+    },
+    "length": 292
+}
+
+
+Запрос 2: DELETE запрос
+URL: https://http-proxy-server-u0dt.onrender.com/proxy
+
+Метод: POST
+
+Тело запроса:
+
+{
+    "method": "DELETE",
+    "url": "https://jsonplaceholder.typicode.com/posts/1"
+}
+
+Ответ:
+
+ {
+    "id": "1720672257777060000",
+    "status": 200,
+    "headers": {
+        "Access-Control-Allow-Credentials": "true",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "Cache-Control": "no-cache",
+        "Cf-Cache-Status": "DYNAMIC",
+        "Cf-Ray": "8a160fadafb9c270-VIE",
+        "Content-Length": "2",
+        "Content-Type": "application/json; charset=utf-8",
+        "Date": "Thu, 11 Jul 2024 04:30:58 GMT",
+        "Etag": "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"",
+        "Expires": "-1",
+        "Nel": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}",
+        "Pragma": "no-cache",
+        "Report-To": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1720672258&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=b%2Fy27gkxVosKNlMJ5JN%2BGaVIzB05UWxXxtatk2MKqOc%3D\"}]}",
+        "Reporting-Endpoints": "heroku-nel=https://nel.heroku.com/reports?ts=1720672258&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&s=b%2Fy27gkxVosKNlMJ5JN%2BGaVIzB05UWxXxtatk2MKqOc%3D",
+        "Server": "cloudflare",
+        "Vary": "Origin, Accept-Encoding",
+        "Via": "1.1 vegur",
+        "X-Content-Type-Options": "nosniff",
+        "X-Powered-By": "Express",
+        "X-Ratelimit-Limit": "1000",
+        "X-Ratelimit-Remaining": "998",
+        "X-Ratelimit-Reset": "1720672262"
+    },
+    "length": 2
+}
